@@ -16,6 +16,9 @@ class Manager(Tk):
             Container: None
         }
 
+        self.load_frames()
+        self.show_frame(Container)
+
     def load_frames(self):
         for FrameClass in self.frames.keys():    # Corregido de self.frame a self.frames
             frame = FrameClass(self.container, self)

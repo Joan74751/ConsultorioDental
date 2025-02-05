@@ -1,0 +1,9 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entrono virtual (por si lo necesitas más adelante)
+.venv/
+venv/
+ENV/

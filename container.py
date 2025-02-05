@@ -7,4 +7,4 @@ class Container(tk.Frame):
     self.controlador = controlador
     self.pack()
     self.place(x=0, y=0, width=800, height=400)
-    self.config(bg=="#C6D9E3")
+    self.config(bg="#C6D9E3")
