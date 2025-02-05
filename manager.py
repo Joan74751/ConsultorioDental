@@ -1,8 +1,9 @@
 from tkinter import Tk, Frame
+from container import Container
 
 class Manager(Tk):
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.title("Caja Registradora")
         self.resizable(False, False)
         self.configure(bg="#C6D9E3")
@@ -16,12 +17,12 @@ class Manager(Tk):
         }
 
     def load_frames(self):
-        for FrameClass in self.frame.keys():
+        for FrameClass in self.frames.keys():    # Corregido de self.frame a self.frames
             frame = FrameClass(self.container, self)
             self.frames[FrameClass] = frame
     
-    def show_frame(self,frame_class):
-        frame = self.frames[frames_class]
+    def show_frame(self, frame_class):
+        frame = self.frames[frame_class]    # Corregido de frames_class a frame_class
         frame.tkraise()
 
 def main():
@@ -29,4 +30,4 @@ def main():
     app.mainloop()
 
 if __name__ == "__main__":
-    main()     
+    main()
